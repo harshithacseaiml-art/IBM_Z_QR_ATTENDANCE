@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Scan &mdash; IBM Z Summit Attendance</title>
+<link rel="stylesheet" href="/css/style.css" />
+<script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand"><strong>IBM Z Summit 2026</strong> &nbsp;/ Attendance System</div>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/admin.html">Admin</a>
+      <a href="/scanner.html" class="active">Scan</a>
+      <a href="/dashboard.html">Dashboard</a>
+    </nav>
+  </div>
+
+  <main>
+    <div class="page-header">
+      <div class="eyebrow">Volunteer</div>
+      <h1>Scan attendance</h1>
+      <p class="subtext">Select the current session, then scan each participant's QR code as they arrive.</p>
+    </div>
+
+    <div class="panel">
+      <div class="field">
+        <label for="session-select">Session</label>
+        <select id="session-select"></select>
+      </div>
+
+      <div id="reader"></div>
+      <p class="empty-state" id="camera-hint">Choose a session above, then allow camera access to start scanning.</p>
+
+      <div class="field" style="margin-top:16px;">
+        <label for="manual-id">Or enter participant ID manually</label>
+        <input type="text" id="manual-id" placeholder="e.g. aB3xY9qLmZ" />
+      </div>
+      <button id="manual-submit" class="secondary">Mark attendance</button>
+
+      <div id="scan-status"></div>
+    </div>
+  </main>
+
+  <script src="/js/scanner.js"></script>
+</body>
+</html>

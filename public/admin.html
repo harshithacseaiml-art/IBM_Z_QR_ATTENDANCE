@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin &mdash; IBM Z Summit Attendance</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand"><strong>IBM Z Summit 2026</strong> &nbsp;/ Attendance System</div>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/admin.html" class="active">Admin</a>
+      <a href="/scanner.html">Scan</a>
+      <a href="/dashboard.html">Dashboard</a>
+    </nav>
+  </div>
+
+  <main>
+    <div class="page-header">
+      <div class="eyebrow">Admin</div>
+      <h1>Register participants &amp; sessions</h1>
+      <p class="subtext">Add a participant to generate their QR code, and create sessions volunteers can scan attendance into.</p>
+    </div>
+
+    <div class="panel">
+      <h2 style="margin-top:0; font-size:16px;">Register a participant</h2>
+      <form id="participant-form">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" required placeholder="e.g. Ananya Rao" />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" required placeholder="e.g. ananya@college.edu" />
+        </div>
+        <div class="field">
+          <label for="college">College / Organization</label>
+          <input type="text" id="college" placeholder="e.g. RV College of Engineering" />
+        </div>
+        <button type="submit">Register &amp; generate QR</button>
+      </form>
+      <div id="participant-status"></div>
+      <div id="qr-result" style="margin-top:16px;"></div>
+    </div>
+
+    <div class="panel">
+      <h2 style="margin-top:0; font-size:16px;">Create a session</h2>
+      <form id="session-form">
+        <div class="field">
+          <label for="session-name">Session name</label>
+          <input type="text" id="session-name" required placeholder="e.g. Hackathon Day 1" />
+        </div>
+        <button type="submit">Create session</button>
+      </form>
+      <div id="session-status"></div>
+    </div>
+
+    <div class="panel">
+      <h2 style="margin-top:0; font-size:16px;">All participants</h2>
+      <div id="participant-list"><p class="empty-state">Loading&hellip;</p></div>
+    </div>
+  </main>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>

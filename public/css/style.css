@@ -1,0 +1,230 @@
+:root {
+  --ink: #0b1220;
+  --paper: #f6f7f9;
+  --panel: #ffffff;
+  --line: #dfe3ea;
+  --blue: #0f4c81;
+  --blue-deep: #0a2f52;
+  --mono-green: #2f9e6b;
+  --amber: #b8790a;
+  --red: #b3312c;
+  --mono: "IBM Plex Mono", "Courier New", monospace;
+  --sans: "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  background: var(--paper);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+a { color: inherit; }
+
+.topbar {
+  background: var(--blue-deep);
+  color: #eef3f8;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid var(--blue);
+}
+
+.topbar .brand {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.topbar .brand strong {
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+.topbar nav a {
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 13.5px;
+  color: #cfe0f2;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.topbar nav a:hover { background: rgba(255,255,255,0.08); }
+.topbar nav a.active { color: #fff; background: rgba(255,255,255,0.14); }
+
+main {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+
+.page-header {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 6px;
+}
+
+h1 {
+  font-size: 26px;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+
+.subtext {
+  color: #4b5563;
+  font-size: 14.5px;
+  margin: 0;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 22px;
+  margin-bottom: 20px;
+}
+
+.field { margin-bottom: 14px; }
+
+.field label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 5px;
+}
+
+.field input, .field select {
+  width: 100%;
+  padding: 9px 11px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: var(--sans);
+  background: #fbfcfd;
+}
+
+.field input:focus, .field select:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(15,76,129,0.12);
+}
+
+button {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background: var(--blue);
+  color: #fff;
+}
+
+button:hover { background: var(--blue-deep); }
+button.secondary { background: #eef1f5; color: var(--ink); }
+button.secondary:hover { background: #e3e7ee; }
+
+.status-line {
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 10px 12px;
+  border-radius: 5px;
+  margin-top: 12px;
+  border: 1px solid transparent;
+}
+
+.status-ok { background: #eafaf1; color: var(--mono-green); border-color: #c9ecd8; }
+.status-warn { background: #fdf5e6; color: var(--amber); border-color: #f2e0b8; }
+.status-error { background: #fdecec; color: var(--red); border-color: #f3cccb; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+th, td {
+  text-align: left;
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+th {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.qr-box {
+  text-align: center;
+  padding: 18px;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  background: #fbfcfd;
+}
+
+.qr-box img { width: 200px; height: 200px; }
+
+.stat-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+
+.stat-card .num {
+  font-family: var(--mono);
+  font-size: 28px;
+  color: var(--blue-deep);
+}
+
+.stat-card .label {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+#reader { width: 100%; max-width: 380px; margin: 0 auto; }
+
+.empty-state {
+  text-align: center;
+  color: #6b7280;
+  font-size: 13.5px;
+  padding: 24px 0;
+}
+
+.session-picker {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.session-picker .field { flex: 1; min-width: 200px; margin-bottom: 0; }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard &mdash; IBM Z Summit Attendance</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand"><strong>IBM Z Summit 2026</strong> &nbsp;/ Attendance System</div>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/admin.html">Admin</a>
+      <a href="/scanner.html">Scan</a>
+      <a href="/dashboard.html" class="active">Dashboard</a>
+    </nav>
+  </div>
+
+  <main>
+    <div class="page-header">
+      <div class="eyebrow">Organizer</div>
+      <h1>Live attendance dashboard</h1>
+      <p class="subtext">Auto-refreshes every 5 seconds while a session is selected.</p>
+    </div>
+
+    <div class="session-picker">
+      <div class="field">
+        <label for="session-select">Session</label>
+        <select id="session-select"></select>
+      </div>
+      <button id="export-btn" class="secondary">Export CSV</button>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="num" id="stat-present">0</div>
+        <div class="label">Marked present</div>
+      </div>
+      <div class="stat-card">
+        <div class="num" id="stat-total">0</div>
+        <div class="label">Total registered</div>
+      </div>
+      <div class="stat-card">
+        <div class="num" id="stat-rate">0%</div>
+        <div class="label">Attendance rate</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2 style="margin-top:0; font-size:16px;">Recent check-ins</h2>
+      <div id="attendance-list"><p class="empty-state">Select a session to view attendance.</p></div>
+    </div>
+  </main>
+
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>
