@@ -89,27 +89,6 @@ ibm-z-qr-attendance/
         └── dashboard.js
 ```
 
----
-
-## Setup Instructions
-
-**Requirements:** Node.js 16+ and npm.
-
-```bash
-# 1. Clone the repository
-git clone <your-repo-url>
-cd ibm-z-qr-attendance
-
-# 2. Install dependencies
-npm install
-
-# 3. Start the server
-node server.js
-
-# 4. Open in your browser
-# http://localhost:3000
-```
-
 ### Using the app
 
 1. Go to **Admin** (`/admin.html`) and create at least one session (e.g. "Hackathon Day 1").
